@@ -1,0 +1,275 @@
+.app-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: var(--bg);
+    padding: 30px;
+}
+
+/* Advice App */
+.advice-card-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    border-radius: 20px;
+    background-color: var(--cardBg);
+    text-align: center;
+}
+
+/* Advice App / Add to Favorites Button */
+.add-favorite {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* Advice App Id */
+.advice-id {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--cardGreen);
+    margin-bottom: 24px;
+}
+
+/* Advice App Content */
+.advice-content {
+    font-size: 30px;
+    line-height: 38px;
+    color: var(--cardGray);
+    margin-bottom: 30px;
+    max-width: 468px;
+}
+
+/* Advice App Separator Line */
+.advice-separator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 17px;
+    gap: 10px;
+    margin-bottom: 34px;
+}
+.vertical-lines {
+    display: flex;
+    gap: 7px;
+}
+.vertical-line {
+    height: 17px;
+    width: 7px;
+    background-image: url('./assets/vertical-line.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.horizontal-line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--cardGray);
+}
+
+/* Advice App Generate Button */
+.generate-advice-button {
+    position: absolute;
+    bottom: -30px;
+    outline: none;
+    border: none;
+    background-color: var(--cardGreen);
+    padding: 18px;
+    border-radius: 500px;
+    cursor: pointer;
+    transition: transform 0.7s ease-in-out;
+}
+.generate-button-image {
+    width: 28px;
+    height: 28px;
+    background-image: url('./assets/dice.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+}
+.generate-advice-button:hover {
+    transform: rotate(360deg);
+    transition: all 0.3s ease-in-out 0s;
+    box-shadow: 0px 0px 20px var(--cardGreen);
+}
+.generate-advice-button:disabled {
+    transition-property: background-color, box-shadow;
+    transition-duration: 0.33s;
+    background-color: var(--cardGray);
+    box-shadow: 0px 0px 20px black;
+}
+
+/* Advice App / Show Favorites Advices */
+.show-favorites-advices {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: var(--cardGreen);
+    color: var(--bg);
+    padding: 16px 20px;
+    border-bottom-left-radius: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.show-favorites-advices:hover {
+    background-color: var(--cardBg);
+    color: var(--cardGreen);
+    box-shadow: 0px 0px 20px var(--cardBg);
+    transition: 0.15s;
+}
+
+/* Advice App / Show Add Advice Modal  */
+.show-add-advice-modal {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: var(--cardGreen);
+    color: var(--bg);
+    padding: 16px 20px;
+    border-bottom-right-radius: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.show-add-advice-modal:hover {
+    background-color: var(--cardBg);
+    color: var(--cardGreen);
+    box-shadow: 0px 0px 20px var(--cardBg);
+    transition: 0.15s;
+}
+@media screen and (min-width: 768px) {
+    .advice-card-container {
+        width: 540px;
+    }
+    .advice-content {
+        min-height: 66px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .advice-card-container {
+        padding: 40px 30px;
+    }
+}
+
+/* Loading spinner */
+.spinner {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 5px solid black;
+    animation: spinner-bulqg1 0.8s infinite linear alternate,
+        spinner-oaa3wk 1.6s infinite linear;
+}
+
+@keyframes spinner-bulqg1 {
+    0% {
+        clip-path: polygon(
+            50% 50%,
+            0 0,
+            50% 0%,
+            50% 0%,
+            50% 0%,
+            50% 0%,
+            50% 0%
+        );
+    }
+    12.5% {
+        clip-path: polygon(
+            50% 50%,
+            0 0,
+            50% 0%,
+            100% 0%,
+            100% 0%,
+            100% 0%,
+            100% 0%
+        );
+    }
+    25% {
+        clip-path: polygon(
+            50% 50%,
+            0 0,
+            50% 0%,
+            100% 0%,
+            100% 100%,
+            100% 100%,
+            100% 100%
+        );
+    }
+    50% {
+        clip-path: polygon(
+            50% 50%,
+            0 0,
+            50% 0%,
+            100% 0%,
+            100% 100%,
+            50% 100%,
+            0% 100%
+        );
+    }
+    62.5% {
+        clip-path: polygon(
+            50% 50%,
+            100% 0,
+            100% 0%,
+            100% 0%,
+            100% 100%,
+            50% 100%,
+            0% 100%
+        );
+    }
+    75% {
+        clip-path: polygon(
+            50% 50%,
+            100% 100%,
+            100% 100%,
+            100% 100%,
+            100% 100%,
+            50% 100%,
+            0% 100%
+        );
+    }
+    100% {
+        clip-path: polygon(
+            50% 50%,
+            50% 100%,
+            50% 100%,
+            50% 100%,
+            50% 100%,
+            50% 100%,
+            0% 100%
+        );
+    }
+}
+@keyframes spinner-oaa3wk {
+    0% {
+        transform: scaleY(1) rotate(0deg);
+    }
+
+    49.99% {
+        transform: scaleY(1) rotate(135deg);
+    }
+
+    50% {
+        transform: scaleY(-1) rotate(0deg);
+    }
+
+    100% {
+        transform: scaleY(-1) rotate(-135deg);
+    }
+}

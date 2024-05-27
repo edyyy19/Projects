@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Strait', sans-serif;
+}
+
+:root {
+    --bg: #202632;
+    --cardBg: #313a49;
+    --cardGreen: #53ffab;
+    --cardGray: #d9d9d9;
+}

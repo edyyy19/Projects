@@ -1,0 +1,81 @@
+.favorite-advices-modal-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.favorite-advices-overlay {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0000007b;
+    z-index: -1;
+}
+.favorite-advices-modal-card {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    border-radius: 20px;
+    background-color: var(--cardBg);
+    color: var(--li);
+    margin: 50px auto 0;
+}
+
+.favorite-advices-modal-title {
+    display: flex;
+    align-items: center;
+    color: var(--cardGray);
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+/* Favorite Advice Card */
+
+.favorite-advice-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.favorite-advice {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: var(--bg);
+    padding: 20px 12px 10px;
+    border-radius: 8px;
+}
+
+.favorite-advice-id {
+    font-weight: 500;
+    color: var(--cardGreen);
+}
+
+.favorite-advice-content {
+    color: var(--cardGray);
+    margin: 2px 0 18px;
+}
+
+.favorite-advice-date {
+    position: absolute;
+    color: var(--cardGray);
+    font-size: 12px;
+    bottom: 8px;
+    right: 8px;
+}
+
+.favorite-advice-delete-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
